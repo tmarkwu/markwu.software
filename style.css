@@ -1,4 +1,4 @@
-.content h1 {
+#type-content {
     text-align: center;
     margin: auto;
     overflow: hidden;
@@ -18,7 +18,7 @@
   background-size: cover;
   background-position: center center;
 }
-img {
+#projects img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -26,12 +26,27 @@ img {
 .fa{
   color: white;
 }
+.edu-photo{
+  text-align: right;
+}
 
+@media only screen and (max-width: 768px) {
+  .edu-photo{
+    text-align: left;
+    padding: 2vh;
+  }
+
+  #photos{
+    display: none;
+  }
+}
 .content {
   margin: auto;
   font-family: monospace;
-  padding-top: 5em;
   justify-content: center;
+  height: 100%;
+  font-size: 4vh;
+  margin-top: 50vh;
 }
 
 .section-title{
@@ -51,17 +66,6 @@ img {
 .about-item{
   margin: auto;
   text-align: center;
-}
-.edu-photo{
-  margin-bottom: 2rem;
-  margin-left: 30rem;
-  padding-right: 10px;
-}
-
-.ncaa-photo{
-  margin-bottom: 2rem;
-  margin-left: 22rem;
-  padding-right: 10px;
 }
 .card:hover{
   transform: scale(1.1);

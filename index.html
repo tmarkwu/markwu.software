@@ -42,8 +42,8 @@
 
   <div id="home">
     <div class="content" id="typewriter">
-      <h2> I'm a </h2>
-      <h1>Software Engineer. </h1>
+      <div class="content-text"> I'm a </div>
+      <div id="type-content" class="content-text">Software Engineer. </div>
       <hr>
       <a class="btn btn-social-icon btn-linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/tmarkwu">
         <span class="fa fa-linkedin"></span>
@@ -51,7 +51,7 @@
       <a class="btn btn-social-icon btn-github" target="_blank" rel="noopener noreferrer" href="https://github.com/tmarkwu">
         <span class="fa fa-github"></span>
       </a>
-    </div>
+  </div>
   </div>
 
   <div id="about">
@@ -60,8 +60,10 @@
 
       <div class="row">
         <div class="col-md-4">
-          <iframe class="edu-photo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47346.41461186507!2d-87.87118696609448!3d42.12565238533858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fba351c0abd47%3A0x12f63c61fae9bbb8!2sNorthbrook%2C%20IL%2060062!5e0!3m2!1sen!2sus!4v1590290880744!5m2!1sen!2sus" width="125" height="125" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
+          <div class="edu-photo">
+            <iframe class="img-fluid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47346.41461186507!2d-87.87118696609448!3d42.12565238533858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fba351c0abd47%3A0x12f63c61fae9bbb8!2sNorthbrook%2C%20IL%2060062!5e0!3m2!1sen!2sus!4v1590290880744!5m2!1sen!2sus" width="125" height="125" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+      </div>
 
         <div class="col-md-8">
           <div class="container">
@@ -71,19 +73,20 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-          <img class="edu-photo" src="images/washu.png" width="125px" height="125px" alt="...">
-        </div>
-
-        <div class="col-md-8">
-          <div class="container">
+          <div class="edu-photo">
+            <img class="img-fluid" src="images/washu.png" width="125px" height="125px" alt="...">
           </div>
+        </div>
+        <div class="col-md-8">
           <div class="timeline-date">Education: </div>I'm a senior at Washington University in St. Louis studying Computer Science and Finance.
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-4">
-        <img class="ncaa-photo" src="images/ncaa.png" width="250px" height="125px" alt="...">
+          <div class="edu-photo">
+            <img class="img-fluid" src="images/ncaa.png" width="250px" height="125px" alt="...">
+          </div>
         </div>
 
         <div class="col-md-8">
@@ -176,7 +179,7 @@
         <a target="_blank" rel="noopener noreferrer" href="https://master.d3bckmtwgrwfut.amplifyapp.com/" class="card-link">Website</a>
         <a href="#" class="card-link">Github</a>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" id="photos">
         <div class="timeline-date">Powered By:</div>
         <hr>
         <div class="row">

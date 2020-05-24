@@ -8,7 +8,7 @@ document.getElementById("typewriter").addEventListener("webkitAnimationEnd", cha
 document.getElementById("typewriter").addEventListener("animationend", changeTxt);
 
 function changeTxt(e){
-  _h1 = this.getElementsByTagName("h1")[0];
+  _h1 = document.getElementById("type-content");
   _h1.style.webkitAnimation = 'none'; // set element animation to none
    setTimeout(function() { // you surely want a delay before the next message appears
       _h1.innerHTML=messages[rank];
