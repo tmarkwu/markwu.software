@@ -37,10 +37,21 @@
   text-align: right;
 }
 
+.section{
+  font-family: monospace;
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
 @media only screen and (max-width: 768px) {
   .edu-photo{
     text-align: left;
     padding: 2vh;
+  }
+
+ .section{
+  display: none;
   }
 
   #profile-pic{
@@ -50,6 +61,11 @@
 
   #photos{
     display: none;
+  }
+
+  .c{
+    margin:5%;
+    font-family: monospace;
   }
 }
 .content {
