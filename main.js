@@ -1,19 +1,41 @@
-var messages=["Student-Athlete.","Teaching Assistant.","Software Engineer."];
-var rank=0;
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
 
-// Code for Chrome, Safari and Opera
-document.getElementById("typewriter").addEventListener("webkitAnimationEnd", changeTxt);
+const textArray = ["enior @ WashU", "tudent-Athlete", "oftware Engineer"];
+const typingDelay = 100;
+const erasingDelay = 70;
+const newTextDelay = 1000;
+let textArrayIndex = 0;
+let charIndex = 0;
 
-// Standard syntax
-document.getElementById("typewriter").addEventListener("animationend", changeTxt);
-
-function changeTxt(e){
-  _h1 = document.getElementById("type-content");
-  _h1.style.webkitAnimation = 'none'; // set element animation to none
-   setTimeout(function() { // you surely want a delay before the next message appears
-      _h1.innerHTML=messages[rank];
-      var speed =2.5*messages[rank].length/20; // adjust the speed (3.5 is the original speed, 20 is the original string length
-      _h1.style.webkitAnimation = 'typing '+speed+'s steps(20, end), blink-caret .75s steps(50, end) infinite'; //  switch to the original set of animation
-      (rank===messages.length-1)?rank=0:rank++; // if you have displayed the last message from the array, go back to the first one, else go to next message
-    }, 1000);
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  }
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
 }
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  }
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
