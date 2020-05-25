@@ -13,7 +13,7 @@
   text-align: center;
   margin: auto;
   height: 100vh;
-  background: linear-gradient(to bottom right, rgba(207, 214, 230, 0.8) -20%, rgba(231, 239, 249, 1) 230.52%), url('images/profile.jpg') no-repeat fixed;
+  background: linear-gradient(to bottom right, rgba(207, 214, 230, 0.7) -20%, rgba(231, 239, 249, 0.9) 230.52%), url('images/background.png') no-repeat fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -22,6 +22,13 @@
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+#profile-pic{
+  border-radius: 50%;
+  margin-bottom: 5vh;
+  filter: grayscale(50%);
+  filter:sepia(40%);
 }
 .fa{
   color: white;
@@ -36,6 +43,11 @@
     padding: 2vh;
   }
 
+  #profile-pic{
+    width: 120px;
+    height: 120px;
+  }
+
   #photos{
     display: none;
   }
@@ -46,7 +58,7 @@
   justify-content: center;
   height: 100%;
   font-size: 4vh;
-  margin-top: 50vh;
+  margin-top: 20vh;
 }
 
 .section-title{
